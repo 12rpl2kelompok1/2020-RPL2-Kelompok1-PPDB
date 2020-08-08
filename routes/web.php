@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('new-welcome');
 });
 
 Auth::routes();
@@ -24,4 +24,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('siswa', 'PpdbController@index');
+Route::get('/siswa', 'PpdbController@index')->name('siswa');
+Route::post('/siswa', 'PpdbController@save_siswa');
+Route::get('/tampil', 'PpdbController@tampil');
+
+Route::get('/edit/{id}', 'PpdbController@edit');
+Route::post('/edit/{id}', 'PpdbController@update');
+
+
+
+
+Route::get('/home' , 'PpdbController@home');

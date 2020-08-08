@@ -14,10 +14,12 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('BELUM MENGISI DATA') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+ 
