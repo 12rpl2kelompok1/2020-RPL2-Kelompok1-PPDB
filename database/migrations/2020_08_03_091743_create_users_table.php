@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('fathers_occupation')->nullable();
             $table->string('mothers_name')->nullable();
             $table->string('mothers_occupation')->nullable();
+            $table->boolean('verification')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
