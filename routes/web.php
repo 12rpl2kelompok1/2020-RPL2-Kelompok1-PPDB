@@ -44,4 +44,8 @@ Route::get('/tampil_admin', 'AdminController@tampil_admin');
 Route::get('/edit_admin/{id}', 'AdminController@edit');
 Route::post('/edit_admin/{id}', 'AdminController@update');
 Route::delete('/admin/{id}', 'AdminController@delete');
+
+
+
+
 Route::get('/home' , 'PpdbController@home');

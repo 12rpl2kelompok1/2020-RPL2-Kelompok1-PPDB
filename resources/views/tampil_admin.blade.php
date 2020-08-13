@@ -18,11 +18,16 @@
 			<td>{{$data->name}}</td>
 			<td>{{$data->email}}</td>
 			<td><a href="{{URL::to('edit_admin')}}/{{$data->id}}">EDIT
-			<td><a href="{{URL::to('admin')}}/{{$data->id}}">Hapus
+			<td>
+				<form action="/admin/{{$data->id}}" method="post">
+				<input type="submit" name="submit" value="DELETE">
+				<input type="hidden" name="_method" value="DELETE">	
+				{{csrf_field()}}
+				</form>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-
+<a href="">Tambah</a>
 </body>
 </html>

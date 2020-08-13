@@ -51,7 +51,7 @@ class AdminController extends Controller
     {
         $admin = Administrative_staffs::find($id);
         $admin->delete();
-        return redirect('admin');
+        return redirect('tampil_admin');
 
     }
 
