@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
         	'name' => 'caca',
         	'email' => 'caca@gmail.com',
         	'email_verified_at' => 'caca@gmail.com',
-        	'password' => '12345678',
+        	'password' => Hash::make('12345678'),
         	'date_of_birth' => 'Bandung, 01 Juli 2004',
         	'gender' => 'Perempuan',
         	'religion' => 'islam',
