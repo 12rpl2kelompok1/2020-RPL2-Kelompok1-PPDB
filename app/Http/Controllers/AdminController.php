@@ -55,6 +55,22 @@ class AdminController extends Controller
 
     }
 
+    public function tambah()
+    {
+       $admin = Administrative_staffs::all();
+
+        return view('tambah_admin', ['admin' => $admin]); 
+    }
+
+    public function save_tambah(Request $request)
+    {
+        $admin = new Administrative_staffs();
+        $admin->name = $request->input('name');
+        $admin->email = $request->input('email');
+        $admin->save(); 
+        return redirect('tampil_admin');
+    }
+
 }
 
    

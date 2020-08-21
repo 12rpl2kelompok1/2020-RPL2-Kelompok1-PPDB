@@ -1,23 +1,17 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>Tambah Data Admin</title>
+	<title>Data Jalur</title>
 </head>
 <body>
-	<h1> TAMBAH DATA ADMIN</h1>
-	<form method="post">
+	<h1> EDIT DATA JALUR</h1>
+	<form method="post" action="/lane/{{$jalur->id}}/edit">
 		@csrf
 		<table style="height: 100px">
 			<tr>
-				<td>Nama</td>
+				<td>Nama Jalur</td>
 				<td>:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-
-			<tr>
-				<td>Email</td>
-				<td>:</td>
-				<td><input type="text" name="email"></td>
+				<td><input type="text" name="ln_name" value="{{$jalur->ln_name}}"></td>
 			</tr>
 
 			<tr>

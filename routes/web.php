@@ -44,8 +44,20 @@ Route::get('/tampil_admin', 'AdminController@tampil_admin');
 Route::get('/edit_admin/{id}', 'AdminController@edit');
 Route::post('/edit_admin/{id}', 'AdminController@update');
 Route::delete('/admin/{id}', 'AdminController@delete');
+Route::get('/tambah_admin', 'AdminController@tambah');
+Route::post('/tambah_admin', 'AdminController@save_tambah');
 
 
+Route::get('/lane', 'LaneController@index');
+Route::get('/lane/{id}/edit', 'LaneController@edit');
+Route::post('/lane/{id}/edit', 'LaneController@update');
+Route::delete('/lane/{id}', 'LaneController@delete');
+Route::get('/lane/tambah', 'LaneController@tambah');
+Route::post('/lane/tambah', 'LaneController@save');
 
 
 Route::get('/home' , 'PpdbController@home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
