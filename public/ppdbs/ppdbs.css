@@ -1,0 +1,253 @@
+.mediaViewInfo {
+	--web-view-name: Custom Size – 1;
+	--web-view-id: Custom_Size__1;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-scale-on-double-click: true;
+	--web-center-horizontally: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Custom_Size__1;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Custom_Size__1 {
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: Custom Size – 1;
+	--web-view-id: Custom_Size__1;
+	--web-enable-scale-up: true;
+	--web-scale-on-resize: true;
+	--web-scale-on-double-click: true;
+	--web-center-horizontally: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#Group_1 {
+	position: absolute;
+	width: 648px;
+	height: 220px;
+	left: 188px;
+	top: 225px;
+	overflow: visible;
+}
+#Rectangle_1 {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1 {
+	position: absolute;
+	overflow: visible;
+	width: 648px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+}
+#Rectangle_1_o {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_1_o {
+	position: absolute;
+	overflow: visible;
+	width: 648px;
+	height: 100px;
+	left: 0px;
+	top: 120px;
+}
+#Email {
+	left: 50px;
+	top: 26px;
+	position: absolute;
+	overflow: visible;
+	width: 84px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(112,112,112,1);
+}
+#Password {
+	left: 50px;
+	top: 148px;
+	position: absolute;
+	overflow: visible;
+	width: 145px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(112,112,112,1);
+}
+#Group_3 {
+	position: absolute;
+	width: 189px;
+	height: 65px;
+	left: 219px;
+	top: 541px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Custom_Size___2.html;
+	cursor: pointer;
+}
+#Path_1 {
+	fill: rgba(16,201,230,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Path_1 {
+	overflow: visible;
+	position: absolute;
+	width: 189px;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Register {
+	left: 26px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 125px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(112,112,112,1);
+}
+#Group_4 {
+	position: absolute;
+	width: 193px;
+	height: 65px;
+	left: 586px;
+	top: 541px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: Web_1366___1.html;
+	cursor: pointer;
+}
+#Rectangle_3 {
+	fill: rgba(16,201,230,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 193px;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+}
+#Login {
+	left: 54px;
+	top: 9px;
+	position: absolute;
+	overflow: visible;
+	width: 87px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(112,112,112,1);
+}
+#unnamed_1 {
+	position: absolute;
+	width: 164px;
+	height: 164px;
+	left: 430px;
+	top: -15px;
+	overflow: visible;
+}
+#SMK_MAHAPUTRA_CERDAS_UTAMA {
+	left: 238px;
+	top: 149px;
+	position: absolute;
+	overflow: visible;
+	width: 549px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(112,112,112,1);
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	87.5% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+#Custom_Size__1_snapshot {
+	animation: fadein 5s linear 0s infinite;
+	pointer-events: none;
+	position: absolute;
+	width: 1024px;
+	height: 768px;
+	left: 0;
+	top: 0;
+}

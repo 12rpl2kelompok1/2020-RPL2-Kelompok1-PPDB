@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    
+                     <a href="/siswa">'anda belum mengisi biodata !'</a> 
+                    
                 </div>
             </div>
         </div>
