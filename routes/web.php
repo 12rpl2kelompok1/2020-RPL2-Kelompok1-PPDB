@@ -14,17 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.master');
 });
 
 Auth::routes(); 
 
 Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
 
 Route::get('/siswa', 'PpdbController@index');
 
@@ -54,10 +49,3 @@ Route::post('/lane/{id}/edit', 'LaneController@update');
 Route::delete('/lane/{id}', 'LaneController@delete');
 Route::get('/lane/tambah', 'LaneController@tambah');
 Route::post('/lane/tambah', 'LaneController@save');
-
-
-Route::get('/home' , 'PpdbController@home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

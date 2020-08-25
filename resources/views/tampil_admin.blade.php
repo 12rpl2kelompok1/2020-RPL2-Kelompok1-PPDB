@@ -1,20 +1,29 @@
+@extends('frontend.master')
+
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Data</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<td>id</td>
-			<td>Nama</td>
-			<td>Email</td>
-			<td>EDIT</td>
-			<td>HAPUS</td>
-		</tr>
-		@foreach ($d as $data)
-		<tr>
-			<td>{{$data->id}}</td>
+	<div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table layout-table">
+                                            <thead class="bg-purple">
+                                                <tr>
+                                                    <th class="text-white">ID</th>
+                                                    <th class="text-white">Nama</th>
+                                                    <th class="text-white">Email</th>
+                                                    <th class="text-white">EDIT</th>
+                                                    <th class="text-white">HAPUS</th>
+                                                </tr>
+                                                
+                         					@foreach ($d as $data)
+                                                <tr>
+										<td>{{$data->id}}</td>
 			<td>{{$data->name}}</td>
 			<td>{{$data->email}}</td>
 			<td><a href="{{URL::to('edit_admin')}}/{{$data->id}}">EDIT
@@ -26,8 +35,14 @@
 				</form>
 			</td>
 		</tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 		@endforeach
 	</table>
 <a href="{{URL::to('tambah_admin')}}">Tambah</a>
 </body>
 </html>
+@endsection
