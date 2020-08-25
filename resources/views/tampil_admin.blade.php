@@ -20,7 +20,7 @@
                                   <th class="text-white">EDIT</th>
                                   <th class="text-white">HAPUS</th>
                                 </tr>
-
+                            </thead>
 							@foreach ($d as $data)
                                 <tr>
 									<td>{{$data->id}}</td>
