@@ -1,3 +1,6 @@
+@extends('frontend.master')
+
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,3 +34,4 @@
 <a href="{{URL::to('lane/tambah')}}">Tambah</a>
 </body>
 </html>
+@endsection

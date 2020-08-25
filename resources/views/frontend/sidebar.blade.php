@@ -28,7 +28,7 @@
                                     <li><a href="/tambah_admin">- Tambah Staff TU</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/siswa"><i class="icon_globe-2"></i> <span>List Calon Siswa</span></a></li>
+                            <li><a href="/tampil"><i class="icon_globe-2"></i> <span>List Calon Siswa</span></a></li>
                             <li class="treeview">
                                 <a href="javascript:void(0)"><i class="icon_easel"></i> <span>Jalur</span> <i class="fa fa-angle-right"></i></a>
                                 <ul class="treeview-menu">
