@@ -22,14 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/siswa', 'PpdbController@index');
-
 Route::post('/siswa', 'PpdbController@save_siswa');
-
-
 Route::get('/tampil', 'PpdbController@tampil');
-
 Route::get('/edit/{id}', 'PpdbController@edit');
-
 Route::post('/edit/{id}', 'PpdbController@update');
 
 
