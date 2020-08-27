@@ -1,25 +1,44 @@
-<!DOCTYPE html> 
-<html>
-<head>
-	<title>Data Jalur</title>
-</head>
-<body>
-	<h1> EDIT DATA JALUR</h1>
-	<form method="post" action="/lane/{{$jalur->id}}/edit">
-		@csrf
-		<table style="height: 100px">
-			<tr>
-				<td>Nama Jalur</td>
-				<td>:</td>
-				<td><input type="text" name="ln_name" value="{{$jalur->ln_name}}"></td>
-			</tr>
+@extends('frontend.master')
 
-			<tr>
-				<td>
-					<input type="submit" value="Simpan">
-					<input type="reset" name="Reset">
-				</td>
-			</tr>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+				<div class="card-header">{{ __('Edit Data Jalur') }}</div>
+
+				<div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <form method="post">
+						@csrf
+
+						<div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Jalur') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="ln_name" name="ln_name" type="text" class="form-control @error('ln_name') is-invalid @enderror" name="ln_name" value="{{ old('ln_name') }}" required autocomplete="ln_name" autofocus>
+
+                                @error('ln_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+						<div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+									{{ __('Simpan') }}
+									<button type="submit" class="btn btn-primary">
+										{{ __('Reset') }}
+                                </button>
+							</div>	
+						</div>
+
        
 		</table>
 
@@ -27,3 +46,4 @@
 
 </body>
 </html>
+@endsection

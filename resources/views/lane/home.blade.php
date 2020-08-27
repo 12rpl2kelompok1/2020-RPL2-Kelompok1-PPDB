@@ -7,15 +7,21 @@
 	<title>Data</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<td>id</td>
-			<td>Nama Jalur</td>
-			<td>EDIT</td>
-			<td>HAPUS</td>
-		</tr>
 
-		</tr>
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table layout-table">
+						<thead class="bg-purple">
+							<tr>
+							  <th class="text-white">ID</th>
+							  <th class="text-white">Nama Jalur</th>
+							  <th class="text-white">EDIT</th>
+							  <th class="text-white">HAPUS</th>
+							</tr>
+						</thead>
+
 		@foreach ($jalur as $data)
 		<tr>
 			<td>{{$data->id}}</td>

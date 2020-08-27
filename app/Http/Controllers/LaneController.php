@@ -46,7 +46,7 @@ class LaneController extends Controller
 
    public function save(Request $request)
     {
-
+        //dd($request->all());
         $jalur = new Lanes;
         $jalur->ln_name = $request->ln_name;
         $jalur->save();

@@ -1,24 +1,34 @@
+@extends('frontend.master')
+
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Data</title>
 </head>
 <body>
-	<table border="1">
-		<tr>
-			<td>id</td>
-			<td>Nama</td>
-			<td>Tempat, Tanggal Lahir</td>
-			<td>Jenis Kelamin</td>
-			<td>Agama</td>
-			<td>Alamat</td>
-			<td>Asal Sekolah</td>
-			<td>Nama Ayah</td>
-			<td>Pekerjaan Ayah</td>
-			<td>Nama Ibu</td>
-			<td>Pekerjaan Ibu</td>
-			<td>EDIT</td>
-		</tr>
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table layout-table">
+						<thead class="bg-purple">
+							<tr>
+							  <th class="text-white">ID</th>
+							  <th class="text-white">Nama</th>
+							  <th class="text-white">Tempat, Tanggal Lahir</th>
+							  <th class="text-white">Jenis Kelamin</th>
+							  <th class="text-white">Agama</th>
+							  <th class="text-white">Alamat</th>
+							  <th class="text-white">Asal Sekolah</th>
+							  <th class="text-white">Nama Ayah</th>
+							  <th class="text-white">Pekerjaan Ayah</th>
+						      <th class="text-white">Nama Ibu</th>
+						      <th class="text-white">Pekerjaan Ibu</th>
+						      <th class="text-white">EDIT</th>
+							</tr>
+						</thead>
+			
 		@foreach ($c as $data)
 		<tr>
 			<td>{{$data->id}}</td>
@@ -40,3 +50,4 @@
 
 </body>
 </html>
+@endsection
