@@ -14,7 +14,7 @@ class CreateAdministrativeStaffsTable extends Migration
     public function up()
     {
         Schema::create('administrative_staffs', function (Blueprint $table) {
-            $table->id();
+            $table->id('staff_id');
             $table->string('name');
             $table->string('email');
             $table->string('password')->nullable();

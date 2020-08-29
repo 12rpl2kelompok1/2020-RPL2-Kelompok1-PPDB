@@ -14,25 +14,25 @@ class LaneController extends Controller
     	return view('lane/home', compact('jalur'));
     }
 
-    public function edit($id)
+    public function edit($ln_id)
     {
-    	 $jalur = Lanes::find($id);
+    	 $jalur = Lanes::find($ln_id);
 
         return view('lane/edit', ['jalur' => $jalur]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $ln_id)
     {
-        $jalur = Lanes::find($id);
+        $jalur = Lanes::find($ln_id);
         $jalur->ln_name = $request->input('ln_name');
         $jalur->save(); 
 
         return redirect('lane');
     }
 
-    public function delete($id)
+    public function delete($ln_id)
     {
-        $jalur = Lanes::find($id);
+        $jalur = Lanes::find($ln_id);
         $jalur->delete();
         return redirect('lane');
     }

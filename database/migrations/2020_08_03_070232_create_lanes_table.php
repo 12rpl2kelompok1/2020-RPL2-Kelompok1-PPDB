@@ -14,7 +14,7 @@ class CreateLanesTable extends Migration
     public function up()
     {
         Schema::create('lanes', function (Blueprint $table) {
-            $table->id();
+            $table->id('ln_id');
             $table->string('ln_name');
             $table->rememberToken();
             $table->timestamps();

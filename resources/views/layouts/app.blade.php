@@ -42,7 +42,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login Admin') }}</a>
+                                <a class="nav-link" href="/login_admin">{{ __('Login Admin') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login Siswa') }}</a>

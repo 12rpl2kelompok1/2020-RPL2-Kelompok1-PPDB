@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1> EDIT DATA ADMIN</h1>
-	<form method="post" action="/edit_admin/{{$admin->id}}">
+	<form method="post" action="/edit_admin/{{$admin->staff_id}}">
 		@csrf
 		<table style="height: 100px">
 			<tr>

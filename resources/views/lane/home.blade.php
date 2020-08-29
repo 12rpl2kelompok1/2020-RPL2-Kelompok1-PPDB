@@ -24,11 +24,11 @@
 
 		@foreach ($jalur as $data)
 		<tr>
-			<td>{{$data->id}}</td>
+			<td>{{$data->ln_id}}</td>
 			<td>{{$data->ln_name}}</td>
-			<td><a href="{{URL::to('lane')}}/{{$data->id}}/edit">EDIT
+			<td><a href="{{URL::to('lane')}}/{{$data->ln_id}}/edit">EDIT
 			<td>
-				<form action="/lane/{{$data->id}}" method="post">
+				<form action="/lane/{{$data->ln_id}}" method="post">
 				<input type="submit" name="submit" value="DELETE">
 				<input type="hidden" name="_method" value="DELETE">	
 				{{csrf_field()}}

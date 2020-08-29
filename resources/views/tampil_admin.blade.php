@@ -21,22 +21,21 @@
                                   <th class="text-white">HAPUS</th>
                                 </tr>
                             </thead>
-							@foreach ($d as $data)
+							         @foreach ($d as $data)
                                 <tr>
-									<td>{{$data->id}}</td>
-									<td>{{$data->name}}</td>
-									<td>{{$data->email}}</td>
-									<td><a href="{{URL::to('edit_admin')}}/{{$data->id}}">EDIT
-									<td>
-										<form action="/admin/{{$data->id}}" method="post">
-										<input type="submit" name="submit" value="DELETE">
-										<input type="hidden" name="_method" value="DELETE">	
-										{{csrf_field()}}
-										</form>
-									</td>
-								</tr>
-							@endforeach
-                                        </table>
+									                 <td>{{$data->staff_id}}</td>
+									                 <td>{{$data->name}}</td>
+									                 <td>{{$data->email}}</td>
+									                 <td><a href="{{URL::to('edit_admin')}}/{{$data->staff_id}}">EDIT
+									                 <td>
+										               <form action="/admin/{{$data->staff_id}}" method="post">
+										               <input type="submit" name="submit" value="DELETE">
+										               <input type="hidden" name="_method" value="DELETE">	
+										               {{csrf_field()}}
+										               </form>
+									                 </td>
+								                </tr>
+							         @endforeach
                                     </div>
                                 </div>
                             </div>

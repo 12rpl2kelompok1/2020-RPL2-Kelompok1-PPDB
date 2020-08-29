@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Administrative_staffs;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -30,16 +31,16 @@ class AdminController extends Controller
 
     }
 
-    public function edit($id)
+    public function edit($staff_id)
     {
-        $admin = Administrative_staffs::find($id);
+        $admin = Administrative_staffs::find($staff_id);
 
         return view('edit_admin', ['admin' => $admin]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $staff_id)
     {
-        $admin = Administrative_staffs::find($id);
+        $admin = Administrative_staffs::find($staff_id);
         $admin->name = $request->input('name');
         $admin->email = $request->input('email');
         $admin->save(); 
@@ -47,9 +48,9 @@ class AdminController extends Controller
         return redirect('tampil_admin');
     }
 
-    public function delete($id)
+    public function delete($staff_id)
     {
-        $admin = Administrative_staffs::find($id);
+        $admin = Administrative_staffs::find($staff_id);
         $admin->delete();
         return redirect('tampil_admin');
 
@@ -69,6 +70,33 @@ class AdminController extends Controller
         $admin->email = $request->input('email');
         $admin->save(); 
         return redirect('tampil_admin');
+    }
+
+    public function login()
+    {
+        return view('login_admin');
+    }
+    public function post_login(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        // if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
+        //     return redirect()->intended('/dashboard_admin');
+        // }
+        $admin = Administrative_staffs::whereEmail($request->email)->where('password')->first();
+        if (!$admin) {
+            return redirect()->back();
+        }
+        return view ('frontend.master');
+        //dd($admin);
+    }
+
+    public function dashboard_admin()
+    {
+        return view('frontend.master');
     }
 
 }

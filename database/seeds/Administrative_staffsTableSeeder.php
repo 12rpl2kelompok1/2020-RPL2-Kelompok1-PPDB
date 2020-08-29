@@ -11,10 +11,10 @@ class Administrative_staffsTableSeeder extends Seeder
      */
     public function run()
     {
-          DB::table('administrative_staffs')->insert([
-        	'name' => 'Pak Yana',
+        DB::table('administrative_staffs')->insert([
+        	'name' => 'Pak Ganay',
         	'email' => 'yana@gmail.com',
-        	'password' => '123'
+        	'password' => Hash::make('12345')
 
         ]);
     }
