@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Users;
+use App\Student;
+use App\Lanes;
 
 
-class PpdbController extends Controller
+class StudentController extends Controller
 {
     public function index()
     {
-    	return view ('siswa');
+        $jalur = Lanes::all();
+        $ln_id = Lanes::first()->ln_id;
+    	return view ('siswa', compact('jalur'));
     }
 
     function home()
@@ -21,9 +24,10 @@ class PpdbController extends Controller
 
     public function save_siswa(Request $request)
     {
-    	$siswa = new users();
-    	$siswa->name = $request->input('name');
-    	$siswa ->date_of_birth = $request->input('date_of_birth');
+    	$siswa = new Student();
+        $siswa->ln_id = $request->input('ln_id');
+    	$siswa->student_name = $request->input('student_name');
+    	$siswa->date_of_birth = $request->input('date_of_birth');
     	$siswa->gender = $request->input('gender');
     	$siswa->religion = $request->input('religion');
         $siswa->addres = $request->input('addres');
@@ -35,25 +39,29 @@ class PpdbController extends Controller
     	$siswa->save(); 
     	return redirect('tampil');
     }
+
+    
    public function tampil()
    {
-    $c = Users::all();
+    $c = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')
+    ->get();
+
     return view('tampil', compact('c'));
 
     }
 
-     public function edit($id)
+     public function edit($student_id)
     {
-        $siswa = Users::find($id);
+        $siswa = Student::find($student_id);
 
         return view('edit', ['siswa' => $siswa]);
 
 
     }
-    public function update(Request $request, $id)
+    public function update(Request $request, $student_id)
     {
-        $siswa = Users::find($id);
-        $siswa->name = $request->input('name');
+        $siswa = Student::find($student_id);
+        $siswa->student_name = $request->input('student_name');
         $siswa->date_of_birth = $request->input('date_of_birth');
         $siswa->gender = $request->input('gender');
         $siswa->religion = $request->input('religion');

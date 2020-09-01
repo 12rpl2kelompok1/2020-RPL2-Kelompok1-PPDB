@@ -29,7 +29,7 @@
 									                 <td><a href="{{URL::to('edit_admin')}}/{{$data->staff_id}}">EDIT
 									                 <td>
 										               <form action="/admin/{{$data->staff_id}}" method="post">
-										               <input type="submit" name="submit" value="DELETE">
+										               <input type="submit" class="btn btn-danger mb-1 mr-1"  name="submit" value="DELETE">
 										               <input type="hidden" name="_method" value="DELETE">	
 										               {{csrf_field()}}
 										               </form>
@@ -39,8 +39,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
-<a href="{{URL::to('tambah_admin')}}">Tambah</a>
+                        </div>
 </body>
 </html>
 @endsection

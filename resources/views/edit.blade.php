@@ -5,13 +5,13 @@
 </head>
 <body>
 	<h1> EDIT DATA SISWA</h1>
-	<form method="post" action="/edit/{{$siswa->id}}">
+	<form method="post" action="/edit/{{$siswa->student_id}}">
 		@csrf
 		<table style="height: 100px">
 			<tr>
 				<td>Nama Siswa</td>
 				<td>:</td>
-				<td><input type="text" name="name" value="{{$siswa->name}}"></td>
+				<td><input type="text" name="student_name" value="{{$siswa->student_name}}"></td>
 			</tr>
 
 			<tr>

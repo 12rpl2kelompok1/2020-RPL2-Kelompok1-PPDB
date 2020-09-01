@@ -52,7 +52,7 @@
 
                                         <h4 class="font-22 mb-30">Sign In</h4>
 
-                                        <form method="post">
+                                        <form method="post" action="{{ route('login') }}>
                                             @csrf
                                             <div class="form-group">
                                                 <label class="float-left" for="emailaddress">Email address</label>

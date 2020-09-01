@@ -16,7 +16,7 @@
                                     <img src="img/member-img/1.png" alt="">
                                 </div>
                                 <div class="user-content">
-                                    <h6>Ajoy Das</h6>
+                                    <h6>Admin</h6>
                                     <span>Pro User</span>
                                 </div>
                             </li>

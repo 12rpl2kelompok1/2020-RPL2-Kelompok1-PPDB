@@ -15,8 +15,10 @@ class CreateAdministrativeStaffsTable extends Migration
     {
         Schema::create('administrative_staffs', function (Blueprint $table) {
             $table->id('staff_id');
+            $table->foreignId('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();

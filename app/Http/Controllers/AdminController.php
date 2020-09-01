@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Administrative_staffs;
+use App\User;
 use Auth;
+use Hash;
 
 class AdminController extends Controller
 {
@@ -86,11 +88,12 @@ class AdminController extends Controller
         // if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
         //     return redirect()->intended('/dashboard_admin');
         // }
-        $admin = Administrative_staffs::whereEmail($request->email)->where('password')->first();
-        if (!$admin) {
+        $admin = User::whereEmail($request->email)->first();
+        //dd(Hash::check($request->password,$admin->password));
+        if (!Hash::check($request->password,$admin->password)) {
             return redirect()->back();
         }
-        return view ('frontend.master');
+        return redirect()->route('login');
         //dd($admin);
     }
 

@@ -12,6 +12,7 @@ class LanesTableSeeder extends Seeder
     public function run()
     {
           DB::table('lanes')->insert([
+            'ln_id' => '1',
         	'ln_name' => 'Jalur Normal'
 
         ]);

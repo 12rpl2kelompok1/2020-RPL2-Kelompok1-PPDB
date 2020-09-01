@@ -29,7 +29,7 @@
 			<td><a href="{{URL::to('lane')}}/{{$data->ln_id}}/edit">EDIT
 			<td>
 				<form action="/lane/{{$data->ln_id}}" method="post">
-				<input type="submit" name="submit" value="DELETE">
+				<input type="submit" class="btn btn-danger mb-1 mr-1" name="submit" value="DELETE">
 				<input type="hidden" name="_method" value="DELETE">	
 				{{csrf_field()}}
 				</form>

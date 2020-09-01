@@ -25,14 +25,15 @@
 							  <th class="text-white">Pekerjaan Ayah</th>
 						      <th class="text-white">Nama Ibu</th>
 						      <th class="text-white">Pekerjaan Ibu</th>
+						      <th class="text-white">Jalur</th>
 						      <th class="text-white">EDIT</th>
 							</tr>
 						</thead>
 			
 		@foreach ($c as $data)
 		<tr>
-			<td>{{$data->id}}</td>
-			<td>{{$data->name}}</td>
+			<td>{{$data->student_id}}</td>
+			<td>{{$data->student_name}}</td>
 			<td>{{$data->date_of_birth}}</td>
 			<td>{{$data->gender}}</td>
 			<td>{{$data->religion}}</td>
@@ -42,8 +43,8 @@
 			<td>{{$data->fathers_occupation}}</td>
 			<td>{{$data->mothers_name}}</td>
 			<td>{{$data->mothers_occupation}}</td>
-			<td><a href="{{URL::to('edit')}}/{{$data->id}}">EDIT
-				<!--<input type="hidden" name="_method" value="EDIT">--></td>
+			<td>{{$data->ln_name}}</td>
+			<td><a href="{{URL::to('edit')}}/{{$data->student_id}}">EDIT
 		</tr>
 		@endforeach
 	</table>

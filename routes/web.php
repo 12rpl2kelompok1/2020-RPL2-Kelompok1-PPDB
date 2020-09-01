@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.master');
+    return view('welcome');
 });
 
 Auth::routes(); 
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/siswa', 'PpdbController@index');
-Route::post('/siswa', 'PpdbController@save_siswa');
-Route::get('/tampil', 'PpdbController@tampil');
-Route::get('/edit/{id}', 'PpdbController@edit');
-Route::post('/edit/{id}', 'PpdbController@update');
+Route::get('/siswa', 'StudentController@index');
+Route::post('/siswa', 'StudentController@save_siswa');
+Route::get('/tampil', 'StudentController@tampil');
+Route::get('/edit/{student_id}', 'StudentController@edit');
+Route::post('/edit/{student_id}', 'StudentController@update');
 
 Route::get('/login_admin', 'AdminController@login');
 Route::post('/login_admin', 'AdminController@post_login');
