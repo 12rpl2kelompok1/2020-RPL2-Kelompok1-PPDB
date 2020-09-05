@@ -26,6 +26,7 @@
 						      <th class="text-white">Nama Ibu</th>
 						      <th class="text-white">Pekerjaan Ibu</th>
 						      <th class="text-white">Jalur</th>
+						      <th class="text-white">Verifikasi</th>
 						      <th class="text-white">EDIT</th>
 							</tr>
 						</thead>
@@ -44,7 +45,14 @@
 			<td>{{$data->mothers_name}}</td>
 			<td>{{$data->mothers_occupation}}</td>
 			<td>{{$data->ln_name}}</td>
-			<td><a href="{{URL::to('edit')}}/{{$data->student_id}}">EDIT
+			<td>
+				@if($data->is_verified==0)
+				<a href="{{URL::to('tampil')}}/{{$data->student_id}}">VERIFIKASI</a>
+				@else
+				Sudah Terverifikasi
+				@endif
+			</td>
+			<td><a href="{{URL::to('edit')}}/{{$data->student_id}}">EDIT</a></td>
 		</tr>
 		@endforeach
 	</table>

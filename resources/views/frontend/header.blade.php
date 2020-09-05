@@ -149,6 +149,8 @@
                             </div>
                         </li>
 
+                          <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="ti-unlink text-warning" aria-hidden="true"></i>logout</a>
+
                         <li class="nav-item dropdown">
                             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="border-radius-50" src="img/member-img/1.png" alt=""></button>
                             <div class="dropdown-menu dropdown-menu-right">
@@ -157,19 +159,13 @@
                                     <div class="user-profile-heading">
                                         <!-- Thumb -->
                                         <div class="profile-thumbnail">
-                                            <img class="border-radius-50" src="img/member-img/1.png" alt="">
+                                            
                                         </div>
                                         <!-- Profile Text -->
-                                        <div class="profile-text">
-                                            <h6>Ajoy Das</h6>
-                                            <span>ajoydas@example.com</span>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="dropdown-item"><i class="ti-user text-default" aria-hidden="true"></i> My profile</a>
-                                    <a href="#" class="dropdown-item"><i class="zmdi zmdi-email-open text-success" aria-hidden="true"></i> Messages</a>
-                                    <a href="#" class="dropdown-item"><i class="ti-settings text-default" aria-hidden="true"></i> Account settings</a>
-                                    <a href="#" class="dropdown-item"><i class="ti-heart text-purple" aria-hidden="true"></i> Support</a>
-                                    <a href="#" class="dropdown-item"><i class="ti-unlink text-warning" aria-hidden="true"></i> Sign-out</a>
+                                    
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display : none;">
+                                        @csrf
+                                    </form>
                                 </div>
                             </div>
                         </li>

@@ -1,8 +1,11 @@
-
-	
-	@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
+ @if (session('Success Message'))
+                            <div class="alert alert-success">
+                               {{ session('Success Message') }} 
+                        </div>
+                    @endif
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,13 +18,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="post">
+                    <form method="post" action="{{URL::to('siswa/create')}}">
 						@csrf
 						<div class="form-group row">
                             <label for="student_name" class="col-md-4 col-form-label text-md-right">{{ __('Nama lengkap') }}</label>
 
                             <div class="col-md-6">
-                                <input id="student_name" type="text" class="form-control @error('student_name') is-invalid @enderror" name="student_name" value="{{ old('student_name') }}" required autocomplete="student_name" autofocus>
+                                <input id="student_name" type="text" class="form-control @error('student_name') is-invalid @enderror" name="student_name" value="{{$siswa->student_name}}" required autocomplete="student_name" autofocus>
 
                                 @error('student_name')
                                     <span class="invalid-feedback" role="alert">
@@ -183,6 +186,7 @@
         </div>
     </div>
 </div>
+ @include('sweetalert::alert')
 @endsection
 
 	

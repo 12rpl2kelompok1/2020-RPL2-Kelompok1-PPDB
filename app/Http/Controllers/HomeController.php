@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Auth;
+use App\Student;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,20 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $siswa = Student::where('id_user', '=',  Auth::user()->id)->first();
+        
+        return view('home' ,['siswa' => $siswa]);
+    }
+
+    public function adminHome()
+    {
+        return view('admin');
+    }
+    
+    public function siswaHome()
+    {
         return view('home');
     }
+
 }

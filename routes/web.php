@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/siswa', 'StudentController@index');
-Route::post('/siswa', 'StudentController@save_siswa');
+
+
 Route::get('/tampil', 'StudentController@tampil');
 Route::get('/edit/{student_id}', 'StudentController@edit');
 Route::post('/edit/{student_id}', 'StudentController@update');
+Route::get('/tampil/{student_id}', 'StudentController@verified');
 
+
+Route::get('siswa', 'HomeController@siswaHome')->name('siswa')->middleware('id_level');
+Route::get('/siswa/create', 'StudentController@index');
+Route::post('/siswa/create', 'StudentController@save_siswa');
+
+
+Route::get('admin', 'HomeController@adminHome')->name('admin')->middleware('id_level');
 Route::get('/login_admin', 'AdminController@login');
 Route::post('/login_admin', 'AdminController@post_login');
 Route::get('/dashboard_admin', 'AdminController@dashboard_admin');

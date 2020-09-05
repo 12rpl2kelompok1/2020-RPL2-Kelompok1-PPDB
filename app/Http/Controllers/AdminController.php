@@ -3,18 +3,50 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Administrative_staffs;
 use App\User;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Hash;
 
 class AdminController extends Controller
 {
 
-    public function index()
+    use AuthenticatesUsers;
+
+    protected $redirectTo = '/dashboard_admin';
+
+    public function __construct()
     {
-    	return view ('admin');
+        $this->middleware('guest:admin')->except('logout')->except('index');
     }
+
+    public function index(){
+          $data = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')
+                        ->get();
+          return view('frontend.master',compact('data'));
+    }
+
+    public function showLoginForm()
+    {
+          return view('login_admin');
+    }
+
+    public function username()
+    {
+            return 'email';
+    }
+
+    protected function guard()
+    {
+          return Auth::guard('admin');
+    }
+
+    // public function index()
+    // {
+    // 	return view('admin');
+    // }
 
     public function save_admin(Request $request)
     {
@@ -67,11 +99,22 @@ class AdminController extends Controller
 
     public function save_tambah(Request $request)
     {
-        $admin = new Administrative_staffs();
-        $admin->name = $request->input('name');
-        $admin->email = $request->input('email');
-        $admin->save(); 
-        return redirect('tampil_admin');
+
+        
+         $user=User::create([
+            'name' => $request->name,
+            'id_level' => 1,
+            'email' => $request->email,
+            'password' => Hash::make('admin'),
+        ]);
+
+        $admin = Administrative_staffs::create([
+            'id_user' => $user['id'],
+            'name' => $user['name'],
+            'email' => $user['email'],
+            'password' => $user['password'],
+        ]);
+    return redirect('tampil_admin');
     }
 
     public function login()
@@ -93,7 +136,8 @@ class AdminController extends Controller
         if (!Hash::check($request->password,$admin->password)) {
             return redirect()->back();
         }
-        return redirect()->route('login');
+        //dd(Auth::user());
+        return view('frontend.master');
         //dd($admin);
     }
 

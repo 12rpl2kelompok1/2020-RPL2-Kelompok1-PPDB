@@ -70,8 +70,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login_admin') }}">Login Admin</a>
-                        <a href="{{ url('/login') }}">Login Siswa</a>
+                        <a href="{{ url('/login') }}">Login</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -97,5 +96,6 @@
                 </div>
             </div>
         </div>
+        @include('sweetalert::alert')
     </body>
 </html>

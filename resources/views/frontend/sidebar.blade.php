@@ -1,7 +1,7 @@
  <div class="ecaps-sidemenu-area">
             <!-- Desktop Logo -->
             <div class="ecaps-logo">
-                <a href="index.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="Desktop Logo"> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
+                <a href="index.html"><img class="desktop-logo" src="{{URL::to('assets/images/Logo Smk.png')}}" alt="Desktop Logo">SMK MAHAPUTRA</img> <img class="small-logo" src="img/core-img/small-logo.png" alt="Mobile Logo"></a>
             </div>
 
             <!-- Side Nav -->
@@ -13,7 +13,7 @@
                         <ul class="sidebar-menu" data-widget="tree">
                             <li class="sidemenu-user-profile d-flex align-items-center">
                                 <div class="user-thumbnail">
-                                    <img src="img/member-img/1.png" alt="">
+                                    <img src="{{URL::to('assets/images/Logo Smk.png')}}" alt="">
                                 </div>
                                 <div class="user-content">
                                     <h6>Admin</h6>

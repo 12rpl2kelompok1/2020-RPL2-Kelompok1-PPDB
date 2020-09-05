@@ -37,7 +37,6 @@
 		</tr>
 		@endforeach
 	</table>
-<a href="{{URL::to('lane/tambah')}}">Tambah</a>
 </body>
 </html>
 @endsection

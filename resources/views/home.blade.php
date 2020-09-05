@@ -8,13 +8,24 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+
+                   @if (Session::has('sweetalert.alert'))
+                        <script>
+                            swal({!! Session::get('sweetalert.alert') !!});
+                        </script>
                     @endif
+                    @php
+                        $siswa = App\Student::whereId_user(Auth::user()->id)->first();
+                    @endphp
                     
-                     <a href="/siswa">'anda belum mengisi biodata !'</a> 
+
+                     @if($siswa->is_verified==0)
+
+                    <a href="{{URL::to('siswa/create')}}">'anda belum mengisi biodata !'</a>
+
+                     @else
+                     Sudah Terverifikasi
+                     @endif
                     
                 </div>
             </div>
