@@ -19,9 +19,9 @@
                     @endphp
                     
 
-                     @if($siswa->is_verified==0)
+                     @if ($siswa->is_verified==0)
 
-                    <a href="{{URL::to('siswa/create')}}">'anda belum mengisi biodata !'</a>
+                    <a href="{{URL::to('siswa/create')}}">'anda belum mengisi formulir !'</a>
 
                      @else
                      Sudah Terverifikasi

@@ -46,7 +46,7 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Kelamin') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
+                                <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{$siswa->gender}}" required autocomplete="gender" autofocus>
 
                                 @error('gender')
                                     <span class="invalid-feedback" role="alert">
@@ -59,7 +59,7 @@
                             <label for="religion" class="col-md-4 col-form-label text-md-right">{{ __('Agama') }}</label>
 
                             <div class="col-md-6">
-                                <input id="religion" type="text" class="form-control @error('religion') is-invalid @enderror" name="religion" value="{{ old('religion') }}" required autocomplete="religion" autofocus>
+                                <input id="religion" type="text" class="form-control @error('religion') is-invalid @enderror" name="religion" value="{{$siswa->religion}}" required autocomplete="religion" autofocus>
 
                                 @error('religion')
                                     <span class="invalid-feedback" role="alert">
@@ -72,7 +72,7 @@
                             <label for="addres" class="col-md-4 col-form-label text-md-right">{{ __('Alamat') }}</label>
 
                             <div class="col-md-6">
-                                <input id="addres" type="text" class="form-control @error('addres') is-invalid @enderror" name="addres" value="{{ old('addres') }}" required autocomplete="addres" autofocus>
+                                <input id="addres" type="text" class="form-control @error('addres') is-invalid @enderror" name="addres" value="{{$siswa->addres}}" required autocomplete="addres" autofocus>
 
                                 @error('addres')
                                     <span class="invalid-feedback" role="alert">
@@ -86,7 +86,7 @@
                             <label for="last_school" class="col-md-4 col-form-label text-md-right">{{ __('Asal Sekolah') }}</label>
 
                             <div class="col-md-6">
-                                <input id="last_school" type="text" class="form-control @error('last_school') is-invalid @enderror" name="last_school" value="{{ old('last_school') }}" required autocomplete="last_school" autofocus>
+                                <input id="last_school" type="text" class="form-control @error('last_school') is-invalid @enderror" name="last_school" value="{{$siswa->last_school}}" required autocomplete="last_school" autofocus>
 
                                 @error('last_school')
                                     <span class="invalid-feedback" role="alert">
@@ -99,7 +99,7 @@
                             <label for="fathers_name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Ayah') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fathers_name" type="text" class="form-control @error('fathers_name') is-invalid @enderror" name="fathers_name" value="{{ old('fathers_name') }}" required autocomplete="fathers_name" autofocus>
+                                <input id="fathers_name" type="text" class="form-control @error('fathers_name') is-invalid @enderror" name="fathers_name" value="{{$siswa->fathers_name}}" required autocomplete="fathers_name" autofocus>
 
                                 @error('fathers_name')
                                     <span class="invalid-feedback" role="alert">
@@ -112,7 +112,7 @@
                             <label for="fathers_occupation" class="col-md-4 col-form-label text-md-right">{{ __('Pekerjaan Ayah') }}</label>
 
                             <div class="col-md-6">
-                                <input id="fathers_occupation" type="text" class="form-control @error('fathers_occupation') is-invalid @enderror" name="fathers_occupation" value="{{ old('fathers_occupation') }}" required autocomplete="fathers_occupation" autofocus>
+                                <input id="fathers_occupation" type="text" class="form-control @error('fathers_occupation') is-invalid @enderror" name="fathers_occupation" value="{{$siswa->fathers_occupation}}" required autocomplete="fathers_occupation" autofocus>
 
                                 @error('fathers_occupation')
                                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@
                             <label for="mothers_name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Ibu') }}</label>
 
                             <div class="col-md-6">
-                                <input id="mothers_name" type="text" class="form-control @error('mothers_name') is-invalid @enderror" name="mothers_name" value="{{ old('mothers_name') }}" required autocomplete="mothers_name" autofocus>
+                                <input id="mothers_name" type="text" class="form-control @error('mothers_name') is-invalid @enderror" name="mothers_name" value="{{$siswa->mothers_name}}" required autocomplete="mothers_name" autofocus>
 
                                 @error('mothers_name')
                                     <span class="invalid-feedback" role="alert">
@@ -139,7 +139,7 @@
                             <label for="mothers_occupation" class="col-md-4 col-form-label text-md-right">{{ __('Pekerjaan Ibu') }}</label>
 
                             <div class="col-md-6">
-                                <input id="mothers_occupation" type="text" class="form-control @error('mothers_occupation') is-invalid @enderror" name="mothers_occupation" value="{{ old('mothers_occupation') }}" required autocomplete="mothers_occupation" autofocus>
+                                <input id="mothers_occupation" type="text" class="form-control @error('mothers_occupation') is-invalid @enderror" name="mothers_occupation" value="{{$siswa->mothers_occupation}}" required autocomplete="mothers_occupation" autofocus>
 
                                 @error('mothers_occupation')
                                     <span class="invalid-feedback" role="alert">

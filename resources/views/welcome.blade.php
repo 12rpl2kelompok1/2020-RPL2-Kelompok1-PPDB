@@ -80,22 +80,30 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    PPDB
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            <img src="{{URL::to('assets/images/Logo Smk.png')}}">
+                <h2>SMK MAHAPUTRA CERDAS UTAMA</h2>
+                <table align="center" border="1">
+                <thead>
+                    <tr>
+                    <th>LANGKAH LANGKAH PENDAFTARAN PPDB ONLINE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="justify">1. Klik Register, Masukan data Nama dan Email pendaftaran, jangan 
+                            lupa masukan Password yang mudah di ingat. <br>
+                            2. Setelah Klik Simpan akan muncul form Login masukan Email dan 
+                            Password yang di isi di Register.<br>
+                            3. Lalu Save, Muncul Klik belum Mengisi Formulir.<br>
+                            4. Tampil form Formulir, isikan data siswa yang ingin didaftarkan.<br>
+                            5. Klik Save lalu muncul Data Berhasil DIsimpan. <br>
+                            6. Tekan Logout, Selesai.</td>
+                    </tr>
+                </tbody>
+                </table>
+                    
                 </div>
             </div>
         </div>
-        @include('sweetalert::alert')
     </body>
 </html>

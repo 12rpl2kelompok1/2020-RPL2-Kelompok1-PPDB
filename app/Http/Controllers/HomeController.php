@@ -29,7 +29,7 @@ class HomeController extends Controller
 
         $siswa = Student::where('id_user', '=',  Auth::user()->id)->first();
         
-        return view('home' ,['siswa' => $siswa]);
+        return view('home' , ['siswa' => $siswa]);
     }
 
     public function adminHome()

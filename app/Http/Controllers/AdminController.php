@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Hash;
+use App\Student;
 
 class AdminController extends Controller
 {
@@ -25,7 +26,7 @@ class AdminController extends Controller
     public function index(){
           $data = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')
                         ->get();
-          return view('frontend.master',compact('data'));
+          return view('frontend.master', compact('data'));
     }
 
     public function showLoginForm()

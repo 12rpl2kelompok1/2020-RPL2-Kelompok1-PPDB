@@ -20,7 +20,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nama Jalur') }}</label>
 
                             <div class="col-md-6">
-                                <input id="ln_name" name="ln_name" type="text" class="form-control @error('ln_name') is-invalid @enderror" name="ln_name" value="{{ old('ln_name') }}" required autocomplete="ln_name" autofocus>
+                                <input id="ln_name" name="ln_name" type="text" class="form-control @error('ln_name') is-invalid @enderror" name="ln_name" value="{{$jalur->ln_name}}" required autocomplete="ln_name" autofocus>
 
                                 @error('ln_name')
                                     <span class="invalid-feedback" role="alert">

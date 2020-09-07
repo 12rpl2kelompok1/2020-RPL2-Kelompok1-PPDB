@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
  @if (session('Success Message'))
@@ -24,7 +24,7 @@
                             <label for="student_name" class="col-md-4 col-form-label text-md-right">{{ __('Nama lengkap') }}</label>
 
                             <div class="col-md-6">
-                                <input id="student_name" type="text" class="form-control @error('student_name') is-invalid @enderror" name="student_name" value="{{$siswa->student_name}}" required autocomplete="student_name" autofocus>
+                                <input id="student_name" type="text" class="form-control @error('student_name') is-invalid @enderror" name="student_name" value="{{old('student_name')}}" required autocomplete="student_name" autofocus>
 
                                 @error('student_name')
                                     <span class="invalid-feedback" role="alert">
@@ -50,13 +50,8 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Kelamin') }}</label>
 
                             <div class="col-md-6">
-                                <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
-
-                                @error('gender')
-                                 <span class="invalid-feedback" role="alert"> -->
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                               <input type="radio" name="gender" value="laki-laki"> Laki-Laki <br>
+                               <input type="radio" name="gender" value="perempuan"> Perempuan <br>
                             </div>
                         </div>
 						<div class="form-group row">
