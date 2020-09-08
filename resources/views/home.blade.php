@@ -24,7 +24,7 @@
                     <a href="{{URL::to('siswa/create')}}">'anda belum mengisi formulir !'</a>
 
                      @else
-                     Sudah Terverifikasi
+                     Diterima
                      @endif
                     
                 </div>

@@ -106,7 +106,7 @@ class AdminController extends Controller
             'name' => $request->name,
             'id_level' => 1,
             'email' => $request->email,
-            'password' => Hash::make('admin'),
+            'password' => Hash::make($request->password),
         ]);
 
         $admin = Administrative_staffs::create([

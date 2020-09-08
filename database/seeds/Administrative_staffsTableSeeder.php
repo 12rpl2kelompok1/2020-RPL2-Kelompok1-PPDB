@@ -14,9 +14,9 @@ class Administrative_staffsTableSeeder extends Seeder
         DB::table('administrative_staffs')->insert([
             'staff_id' => '1',
             'id_user' => '2',
-        	'name' => 'Pak Hamdan',
+        	'name' => 'Hamdan Firmansyah,S.Pd',
         	'email' => 'admin@gmail.com',
-        	'password' => Hash::make('12345')
+        	'password' => Hash::make('12345'),
 
         ]);
     }

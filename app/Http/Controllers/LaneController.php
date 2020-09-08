@@ -31,13 +31,6 @@ class LaneController extends Controller
         return redirect('lane');
     }
 
-    public function delete($ln_id)
-    {
-        $jalur = Lanes::find($ln_id);
-        $jalur->delete();
-        return redirect('lane');
-    }
-
     public function tambah()
     {
        $jalur = Lanes::all();

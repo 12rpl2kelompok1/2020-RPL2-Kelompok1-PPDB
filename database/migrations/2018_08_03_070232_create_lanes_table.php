@@ -18,7 +18,6 @@ class CreateLanesTable extends Migration
             $table->string('ln_name');
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

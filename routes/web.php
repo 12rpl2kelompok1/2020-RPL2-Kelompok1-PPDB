@@ -52,6 +52,5 @@ Route::post('/tambah_admin', 'AdminController@save_tambah');
 Route::get('/lane', 'LaneController@index');
 Route::get('/lane/{ln_id}/edit', 'LaneController@edit');
 Route::post('/lane/{ln_id}/edit', 'LaneController@update');
-Route::delete('/lane/{ln_id}', 'LaneController@delete');
 Route::get('/lane/tambah', 'LaneController@tambah');
 Route::post('/lane/tambah', 'LaneController@save');
