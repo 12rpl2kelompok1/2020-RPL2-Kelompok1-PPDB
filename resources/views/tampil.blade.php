@@ -54,6 +54,7 @@
 			</td>
 			<td><a href="{{URL::to('edit')}}/{{$data->student_id}}">EDIT</a></td>
 		</tr>
+		 {{csrf_field()}}
 		@endforeach
 	</table>
 

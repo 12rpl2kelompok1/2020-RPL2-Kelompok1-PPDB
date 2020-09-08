@@ -57,9 +57,8 @@ class StudentController extends Controller
     
    public function tampil()
    {
-    $c = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')
-    ->get();
-
+    $c = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')->get();
+     
     return view('tampil', compact('c'));
 
     }

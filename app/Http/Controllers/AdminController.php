@@ -26,7 +26,7 @@ class AdminController extends Controller
     public function index(){
           $data = Student::join('lanes', 'lanes.ln_id', '=', 'students.ln_id')
                         ->get();
-          return view('frontend.master', compact('data'));
+          return view ('frontend.master', compact('data'));
     }
 
     public function showLoginForm()
